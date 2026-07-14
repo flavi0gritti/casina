@@ -1,0 +1,16 @@
+[out:json][timeout:180];
+{{geocodeArea:Milano}}->.milano;
+
+(
+  way["highway"]["name"](area.milano);
+)->.streets;
+
+.streets out tags geom;
+
+(
+  node["addr:housenumber"]["addr:street"](area.milano);
+  way["addr:housenumber"]["addr:street"](area.milano);
+  relation["addr:housenumber"]["addr:street"](area.milano);
+)->.addresses;
+
+.addresses out tags center;
