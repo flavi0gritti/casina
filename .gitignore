@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Large OSM raw export (46 MB) — keep derived indices if needed
+dataset/openstreetmap/export.geojson

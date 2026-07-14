@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Casina Milano</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="topbar" aria-label="Panoramica ricerca casa">
+        <div>
+          <p class="eyebrow">Milano · acquisto casa</p>
+          <h1>Casina</h1>
+          <p class="subtitle">Parti dal budget per scegliere le zone OMI da presidiare. La mappa ti mostra quali fermate metro aiutano a restringere il campo.</p>
+        </div>
+      </section>
+
+      <section class="controls budget-controls" aria-label="Ricerca per budget">
+        <label class="field">
+          <span>Budget minimo</span>
+          <input id="budgetMin" type="number" min="0" step="10000" value="250000" />
+        </label>
+        <label class="field">
+          <span>Budget massimo</span>
+          <input id="budgetMax" type="number" min="0" step="10000" value="550000" />
+        </label>
+        <label class="field">
+          <span>Superficie target</span>
+          <input id="size" type="number" min="20" step="5" value="70" />
+        </label>
+        <p class="form-error" id="budgetError" hidden>Il budget minimo deve essere inferiore al budget massimo.</p>
+      </section>
+
+      <section class="scenario-controls" aria-label="Scenario di stima">
+        <div>
+          <span>Scenario valori</span>
+          <p>OMI pesato per tipologia/stato, benchmark Immobiliare e premio metro dichiarato.</p>
+        </div>
+        <div class="scenario-buttons" role="group" aria-label="Seleziona scenario valori">
+          <button class="scenario-btn" type="button" data-scenario="prudent">Prudente</button>
+          <button class="scenario-btn is-active" type="button" data-scenario="realistic">Realistico</button>
+          <button class="scenario-btn" type="button" data-scenario="renovated">Ristrutturato</button>
+        </div>
+      </section>
+
+      <section class="summary-grid" aria-label="Indicatori">
+        <article class="metric">
+          <span>Zone OMI da presidiare</span>
+          <strong id="visibleCount">0</strong>
+        </article>
+        <article class="metric">
+          <span>Fermate metro nelle zone</span>
+          <strong id="matchCount">0</strong>
+        </article>
+        <article class="metric">
+          <span>Media più economica al mq</span>
+          <strong id="cheapestZone">-</strong>
+          <p id="cheapestDetail" class="metric-detail">Imposta budget e superficie.</p>
+        </article>
+        <article class="metric">
+          <span>Zona più servita metro</span>
+          <strong id="bestTransitZone">-</strong>
+          <p id="bestTransitDetail" class="metric-detail">Imposta budget e superficie.</p>
+        </article>
+      </section>
+
+      <section class="map-panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Mappa zone OMI</h2>
+            <p id="mapHint">Verde: zone nel budget. Punti neri: fermate metro utili rispetto ai filtri.</p>
+          </div>
+          <div class="map-actions">
+            <button id="toggleMap" class="text-btn" type="button">Nascondi mappa</button>
+            <button id="filterToggle" class="text-btn filter-btn" type="button" aria-expanded="false" aria-controls="mapFilters">Filtri metro</button>
+          </div>
+        </div>
+        <div id="mapFilters" class="map-filters" aria-label="Filtri metro della mappa" hidden>
+          <div class="line-filter">
+            <span>Metro utili</span>
+            <div class="line-chips" id="lineChips"></div>
+          </div>
+          <label class="field compact-field">
+            <span>Fermata</span>
+            <select id="stopSelect"></select>
+          </label>
+          <label class="field compact-field">
+            <span>Distanza</span>
+            <select id="radius">
+              <option value="500">500 m</option>
+              <option value="800" selected>800 m</option>
+              <option value="1000">1 km</option>
+              <option value="1500">1,5 km</option>
+            </select>
+          </label>
+        </div>
+        <div class="map-wrap">
+          <svg id="map" role="img" aria-label="Mappa delle zone OMI e fermate metro di Milano"></svg>
+          <div id="tooltip" class="tooltip" hidden></div>
+        </div>
+      </section>
+
+      <section class="table-panel" aria-label="Elenco zone">
+        <div class="panel-heading">
+          <div>
+            <h2 id="tableTitle">Zone OMI da presidiare</h2>
+            <p id="tableSubtitle">Ordinate per vicinanza al centro del tuo budget e accessibilità metro.</p>
+          </div>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Zona OMI</th>
+                <th>Quartieri</th>
+                <th>Valori scenario</th>
+                <th>Stima</th>
+                <th>Metro utili</th>
+                <th>Perché guardarla</th>
+              </tr>
+            </thead>
+            <tbody id="zoneRows"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (1333 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <relation id="44915" visible="true" version="112" changeset="181749431" timestamp="2026-04-24T07:00:05Z" user="f_gonella" uid="8716397">
+  <member type="way" ref="297203171" role="outer"/>
+  <member type="way" ref="50097377" role="outer"/>
+  <member type="way" ref="50097378" role="outer"/>
+  <member type="way" ref="532967358" role="outer"/>
+  <member type="way" ref="50097376" role="outer"/>
+  <member type="way" ref="475122995" role="outer"/>
+  <member type="way" ref="297207160" role="outer"/>
+  <member type="way" ref="50097360" role="outer"/>
+  <member type="way" ref="50097364" role="outer"/>
+  <member type="way" ref="50097362" role="outer"/>
+  <member type="way" ref="1503272222" role="outer"/>
+  <member type="way" ref="451844527" role="outer"/>
+  <member type="way" ref="199734212" role="outer"/>
+  <member type="way" ref="450184477" role="outer"/>
+  <member type="way" ref="330286483" role="outer"/>
+  <member type="way" ref="50097368" role="outer"/>
+  <member type="way" ref="45830861" role="outer"/>
+  <member type="way" ref="297217631" role="outer"/>
+  <member type="way" ref="45830864" role="outer"/>
+  <member type="way" ref="45830851" role="outer"/>
+  <member type="way" ref="331941854" role="outer"/>
+  <member type="way" ref="45778418" role="outer"/>
+  <member type="way" ref="331941773" role="outer"/>
+  <member type="way" ref="45589212" role="outer"/>
+  <member type="way" ref="297228877" role="outer"/>
+  <member type="way" ref="1025255262" role="outer"/>
+  <member type="way" ref="1025257338" role="outer"/>
+  <member type="way" ref="440983298" role="outer"/>
+  <member type="way" ref="160016014" role="outer"/>
+  <member type="way" ref="1043243265" role="outer"/>
+  <member type="way" ref="42472334" role="outer"/>
+  <member type="way" ref="297186749" role="outer"/>
+  <member type="way" ref="834600040" role="outer"/>
+  <member type="way" ref="50097386" role="outer"/>
+  <member type="way" ref="460744837" role="outer"/>
+  <member type="way" ref="50097385" role="outer"/>
+  <member type="way" ref="803588941" role="outer"/>
+  <member type="way" ref="808400687" role="outer"/>
+  <member type="way" ref="669311876" role="outer"/>
+  <member type="way" ref="461410597" role="outer"/>
+  <member type="way" ref="669350086" role="outer"/>
+  <member type="way" ref="113219361" role="outer"/>
+  <member type="way" ref="466057457" role="outer"/>
+  <member type="way" ref="375289253" role="outer"/>
+  <member type="node" ref="62505581" role="admin_centre"/>
+  <tag k="admin_level" v="8"/>
+  <tag k="alt_name:ar" v="ميلانو"/>
+  <tag k="boundary" v="administrative"/>
+  <tag k="capital" v="4"/>
+  <tag k="coat_of_arms" v="File:CoA Città di Milano.svg"/>
+  <tag k="flag" v="File:Flag of Milan.svg"/>
+  <tag k="loc_name:ar" v="ميلان"/>
+  <tag k="name" v="Milano"/>
+  <tag k="name:ar" v="ميلان"/>
+  <tag k="name:az-Arab" v="میلان"/>
+  <tag k="name:azb" v="میلان"/>
+  <tag k="name:da" v="Milano"/>
+  <tag k="name:de" v="Mailand"/>
+  <tag k="name:en" v="Milan"/>
+  <tag k="name:fa" v="میلان"/>
+  <tag k="name:it" v="Milano"/>
+  <tag k="name:ks" v="میلان"/>
+  <tag k="name:la" v="Mediolanum"/>
+  <tag k="name:lmo" v="Milan"/>
+  <tag k="name:pa" v="ਮਿਲਾਨ"/>
+  <tag k="name:sk" v="Miláno"/>
+  <tag k="name:ur" v="میلان"/>
+  <tag k="official_name" v="Comune di Milano"/>
+  <tag k="population" v="1394798"/>
+  <tag k="population:date" v="2021-08-31"/>
+  <tag k="ref:catasto" v="F205"/>
+  <tag k="ref:ISTAT" v="015146"/>
+  <tag k="start_date" v="1117"/>
+  <tag k="type" v="boundary"/>
+  <tag k="website" v="https://www.comune.milano.it/"/>
+  <tag k="wikidata" v="Q490"/>
+  <tag k="wikipedia" v="it:Milano"/>
+ </relation>
+</osm>
